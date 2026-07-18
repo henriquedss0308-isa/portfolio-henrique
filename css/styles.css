@@ -377,6 +377,28 @@ code {
   gap: 0.75rem;
 }
 
+/* ---------- Sobre mim ---------- */
+.about {
+  max-width: 44rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.about__text {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* Desktop: reduz a altura da seção (título + 2 parágrafos curtos)
+   mantendo respiro. No mobile permanece o padding padrão da .section. */
+@media (min-width: 769px) {
+  #sobre.section {
+    padding-block: clamp(3.5rem, 5vw, 4.5rem);
+  }
+}
+
 /* ---------- Projetos ---------- */
 .projects-grid {
   display: grid;

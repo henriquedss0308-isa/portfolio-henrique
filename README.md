@@ -1,4 +1,4 @@
-# Henrique | Portfólio de Desenvolvimento Web
+# Henrique Santos | Portfólio de Desenvolvimento Web
 
 Site portfólio profissional para apresentar projetos demonstrativos e facilitar o contato com possíveis clientes.
 
