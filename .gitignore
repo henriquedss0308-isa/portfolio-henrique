@@ -1,0 +1,20 @@
+# Ferramentas locais
+.claude/
+.vercel/
+
+# Dependências / build
+node_modules/
+dist/
+build/
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+*.pem
+*.key
+
+# Arquivos de sistema / temporários
+.DS_Store
+Thumbs.db
+*.log
+*.tmp

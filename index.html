@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Desenvolvimento de sites, landing pages e sistemas simples para pequenos negócios.">
+  <meta name="author" content="Henrique">
+  <meta name="theme-color" content="#0b0f14">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Henrique | Desenvolvimento Web">
+  <meta property="og:description" content="Desenvolvimento de sites, landing pages e sistemas simples para pequenos negócios.">
+  <meta property="og:locale" content="pt_BR">
+
+  <title>Henrique | Desenvolvimento Web</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Henrique - início">Henrique</a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Início</a></li>
+          <li><a href="#projetos" class="nav__link">Projetos</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+        <a href="#contato" class="btn btn--primary btn--sm header__cta">Falar comigo</a>
+      </nav>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="nav"
+      >
+        <span class="menu-toggle__bar" aria-hidden="true"></span>
+        <span class="menu-toggle__bar" aria-hidden="true"></span>
+        <span class="menu-toggle__bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <p class="hero__label">Desenvolvimento web</p>
+        <h1 class="hero__title">Sites e sistemas para pequenos negócios</h1>
+        <p class="hero__description">
+          Desenvolvo páginas profissionais e ferramentas simples para ajudar negócios
+          a organizar atendimentos, apresentar seus serviços e acompanhar resultados.
+        </p>
+        <div class="hero__actions">
+          <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+          <a href="#contato" class="btn btn--secondary">Entrar em contato</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="section" id="projetos" aria-labelledby="projetos-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title" id="projetos-title">Projetos</h2>
+          <p class="section__intro">
+            Projetos demonstrativos criados para apresentar minhas habilidades em
+            desenvolvimento web. Não são trabalhos realizados para clientes reais.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <!-- Projeto 1 -->
+          <article class="project-card">
+            <div class="project-card__image-wrap">
+              <img
+                src="assets/projetos/landing-psicologa.png"
+                alt="Demonstração da Landing Page para Psicóloga: hero com título e foto profissional"
+                class="project-card__image"
+                width="1365"
+                height="602"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              >
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Landing page</span>
+              <h3 class="project-card__title">Landing Page para Psicóloga</h3>
+              <p class="project-card__description">
+                Página profissional criada para apresentar serviços, informações importantes
+                e facilitar o contato com possíveis pacientes.
+              </p>
+              <div class="project-card__actions">
+                <a
+                  href="https://landing-page-psicologa-chi.vercel.app/"
+                  class="btn btn--primary btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver demonstração
+                </a>
+                <a
+                  href="https://github.com/henriquedss0308-isa/landing-page-psicologa"
+                  class="btn btn--ghost btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="project-card">
+            <div class="project-card__image-wrap">
+              <img
+                src="assets/projetos/orca-facil.png"
+                alt="Demonstração do Orça Fácil: tela de criação de novo orçamento"
+                class="project-card__image"
+                width="1350"
+                height="605"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Sistema comercial</span>
+              <h3 class="project-card__title">Orça Fácil</h3>
+              <p class="project-card__description">
+                Ferramenta para criação e organização rápida de orçamentos para
+                pequenos prestadores de serviços.
+              </p>
+              <div class="project-card__actions">
+                <a
+                  href="https://orca-facil-ochre.vercel.app/"
+                  class="btn btn--primary btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver demonstração
+                </a>
+                <a
+                  href="https://github.com/henriquedss0308-isa/orca-facil"
+                  class="btn btn--ghost btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="project-card">
+            <div class="project-card__image-wrap">
+              <img
+                src="assets/projetos/agenda-simples.png"
+                alt="Demonstração do Agenda Simples: dashboard com agendamentos do dia"
+                class="project-card__image"
+                width="1351"
+                height="606"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Sistema de agendamento</span>
+              <h3 class="project-card__title">Agenda Simples</h3>
+              <p class="project-card__description">
+                Sistema demonstrativo para organização de horários, atendimentos e compromissos.
+              </p>
+              <div class="project-card__actions">
+                <a
+                  href="https://agenda-simples-five.vercel.app/"
+                  class="btn btn--primary btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver demonstração
+                </a>
+                <a
+                  href="https://github.com/henriquedss0308-isa/agenda-simples"
+                  class="btn btn--ghost btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 4 -->
+          <article class="project-card">
+            <div class="project-card__image-wrap">
+              <img
+                src="assets/projetos/visao-comercial.png"
+                alt="Demonstração do Visão Comercial: painel com indicadores de vendas"
+                class="project-card__image"
+                width="1347"
+                height="604"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="project-card__body">
+              <span class="project-card__category">Dashboard comercial</span>
+              <h3 class="project-card__title">Visão Comercial</h3>
+              <p class="project-card__description">
+                Dashboard demonstrativo para visualizar indicadores e acompanhar
+                o desempenho de um negócio.
+              </p>
+              <div class="project-card__actions">
+                <a
+                  href="https://visao-comercial-five.vercel.app/"
+                  class="btn btn--primary btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver demonstração
+                </a>
+                <a
+                  href="https://github.com/henriquedss0308-isa/visao-comercial"
+                  class="btn btn--ghost btn--sm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver código
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section section--alt" id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title" id="servicos-title">Serviços</h2>
+          <p class="section__intro">
+            Soluções diretas e práticas para quem precisa de presença online e
+            organização no dia a dia.
+          </p>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18"/>
+                <path d="M9 21V9"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Landing pages</h3>
+            <p class="service-card__description">
+              Páginas para apresentar serviços, captar contatos e fortalecer a presença profissional.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Sites institucionais</h3>
+            <p class="service-card__description">
+              Sites para negócios que precisam centralizar informações, serviços e formas de contato.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20V10"/>
+                <path d="M18 20V4"/>
+                <path d="M6 20v-4"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Sistemas personalizados</h3>
+            <p class="service-card__description">
+              Ferramentas simples de agendamento, orçamento, organização e visualização de dados.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section class="section" id="como-funciona" aria-labelledby="como-funciona-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title" id="como-funciona-title">Como funciona</h2>
+          <p class="section__intro">
+            Um processo simples, do entendimento da necessidade até a publicação.
+          </p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__number" aria-hidden="true">1</span>
+            <div class="step__content">
+              <h3 class="step__title">Entendo o que o negócio precisa</h3>
+              <p class="step__description">
+                Conversamos sobre o objetivo, o público e o que precisa aparecer no site ou sistema.
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__number" aria-hidden="true">2</span>
+            <div class="step__content">
+              <h3 class="step__title">Crio uma primeira versão para validação</h3>
+              <p class="step__description">
+                Você recebe uma versão inicial para avaliar estrutura, textos e funcionamento.
+              </p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step__number" aria-hidden="true">3</span>
+            <div class="step__content">
+              <h3 class="step__title">Realizo os ajustes e publico o projeto</h3>
+              <p class="step__description">
+                Aplico as alterações combinadas e deixo o projeto no ar, pronto para uso.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section section--contact" id="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <header class="section__header section__header--center">
+          <h2 class="section__title" id="contato-title">Tem algum projeto em mente?</h2>
+          <p class="section__intro">
+            Posso criar uma solução simples e personalizada para o seu negócio.
+          </p>
+        </header>
+
+        <div class="contact-actions" id="contact-actions">
+          <!-- Links também configurados em js/main.js (fonte principal) -->
+          <a
+            href="https://wa.me/5517996712837"
+            class="btn btn--primary contact-btn"
+            data-contact="whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+          <a
+            href="https://www.instagram.com/henrique_santoszxs"
+            class="btn btn--secondary contact-btn"
+            data-contact="instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+          <a
+            href="mailto:henrique.dss0308@gmail.com"
+            class="btn btn--secondary contact-btn"
+            data-contact="email"
+          >
+            E-mail
+          </a>
+          <a
+            href="https://github.com/henriquedss0308-isa"
+            class="btn btn--secondary contact-btn"
+            data-contact="github"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+        <p class="contact-note" id="contact-note" hidden>
+          Alguns canais de contato ainda não foram configurados. Atualize os links em
+          <code>js/main.js</code>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__name">Henrique</span>
+        <span class="footer__tagline">Desenvolvimento web</span>
+      </div>
+      <a
+        href="https://github.com/henriquedss0308-isa"
+        class="footer__link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+      <p class="footer__copy">
+        &copy; <span id="current-year"></span> Henrique. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
