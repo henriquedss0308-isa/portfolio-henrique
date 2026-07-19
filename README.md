@@ -96,7 +96,7 @@ const contactLinks = {
 
 ## Onde alterar os links e textos dos projetos
 
-Os quatro cards ficam em **`index.html`**, na seção `#projetos`.
+Os cinco cards ficam em **`index.html`**, na seção `#projetos`.
 
 Para cada projeto, edite o `<article class="project-card">` correspondente:
 
@@ -114,6 +114,7 @@ Para cada projeto, edite o `<article class="project-card">` correspondente:
 | Orça Fácil                  | https://orca-facil-ochre.vercel.app/              | [repo](https://github.com/henriquedss0308-isa/orca-facil) |
 | Agenda Simples              | https://agenda-simples-five.vercel.app/           | [repo](https://github.com/henriquedss0308-isa/agenda-simples) |
 | Visão Comercial             | https://visao-comercial-five.vercel.app/          | [repo](https://github.com/henriquedss0308-isa/visao-comercial) |
+| MenuZap                     | https://menu-zap-dun.vercel.app/                  | [repo](https://github.com/henriquedss0308-isa/menu-zap) |
 
 ---
 
@@ -133,6 +134,7 @@ Com estes nomes exatos:
 | `orca-facil.png`        | Orça Fácil                  |
 | `agenda-simples.png`    | Agenda Simples              |
 | `visao-comercial.png`   | Visão Comercial             |
+| `menu-zap.jpg`          | MenuZap                     |
 
 ### Dicas para as imagens
 
@@ -218,7 +220,7 @@ A cada `git push` na branch principal, a Vercel republica o site automaticamente
 ## Checklist rápido
 
 - [ ] Preencher WhatsApp, Instagram e e-mail em `js/main.js`
-- [ ] Colocar os 4 screenshots em `assets/projetos/`
+- [ ] Colocar os 5 screenshots em `assets/projetos/`
 - [ ] Revisar textos e links no `index.html`
 - [ ] Testar no celular (menu, botões, sem rolagem horizontal)
 - [ ] Publicar no GitHub + Vercel

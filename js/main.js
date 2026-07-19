@@ -27,6 +27,7 @@ const contactLinks = {
  *   - orca-facil.png
  *   - agenda-simples.png
  *   - visao-comercial.png
+ *   - menu-zap.jpg
  *
  * Proporção atual dos screenshots: ~20:9 (ex.: 1366×610).
  * ============================================================
