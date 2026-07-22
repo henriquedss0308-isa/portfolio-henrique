@@ -10,7 +10,7 @@
  */
 const contactLinks = {
   whatsapp: "https://wa.me/5517996712837",
-  instagram: "https://www.instagram.com/henrique_santoszxs",
+  instagram: "https://www.instagram.com/henriquesantos.web",
   email: "mailto:henrique.dss0308@gmail.com",
   github: "https://github.com/henriquedss0308-isa",
 };
