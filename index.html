@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Desenvolvimento de sites, landing pages e sistemas simples para pequenos negócios.">
   <meta name="author" content="Henrique Santos">
-  <meta name="theme-color" content="#0b0f14">
+  <meta name="theme-color" content="#06080f">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -16,19 +16,45 @@
   <title>Henrique Santos | Desenvolvimento Web</title>
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Tipografia -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap"
+  >
+
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Marca que o JS está ativo (habilita as animações de entrada sem quebrar o site sem JS) -->
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
   <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
 
+  <!-- Camada decorativa de fundo -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__grid"></div>
+    <div class="backdrop__glow backdrop__glow--a"></div>
+    <div class="backdrop__glow backdrop__glow--b"></div>
+    <div class="backdrop__glow backdrop__glow--c"></div>
+    <div class="backdrop__noise"></div>
+  </div>
+
   <!-- Header -->
   <header class="header" id="header">
+    <div class="header__progress" id="scroll-progress" aria-hidden="true"></div>
+
     <div class="container header__inner">
-      <a href="#inicio" class="logo" aria-label="Henrique Santos - início">Henrique Santos</a>
+      <a href="#inicio" class="logo" aria-label="Henrique Santos - início">
+        <span class="logo__mark" aria-hidden="true">HS</span>
+        <span class="logo__text">Henrique<span class="logo__last">Santos</span></span>
+      </a>
 
       <nav class="nav" id="nav" aria-label="Navegação principal">
         <ul class="nav__list">
-          <li><a href="#inicio" class="nav__link">Início</a></li>
+          <li><a href="#inicio" class="nav__link is-active">Início</a></li>
           <li><a href="#sobre" class="nav__link">Sobre mim</a></li>
           <li><a href="#projetos" class="nav__link">Projetos</a></li>
           <li><a href="#servicos" class="nav__link">Serviços</a></li>
@@ -56,44 +82,132 @@
     <!-- Hero -->
     <section class="hero" id="inicio">
       <div class="container hero__inner">
-        <p class="hero__label">Desenvolvimento web</p>
-        <h1 class="hero__title">Sites e sistemas para pequenos negócios</h1>
-        <p class="hero__description">
+        <p class="hero__badge" data-reveal>
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          Disponível para novos projetos
+        </p>
+
+        <h1 class="hero__title" data-reveal data-reveal-delay="1">
+          Sites e sistemas para
+          <span class="text-gradient">pequenos negócios</span>
+        </h1>
+
+        <p class="hero__description" data-reveal data-reveal-delay="2">
           Desenvolvo páginas profissionais e ferramentas simples para ajudar negócios
           a organizar atendimentos, apresentar seus serviços e acompanhar resultados.
         </p>
-        <div class="hero__actions">
-          <a href="#projetos" class="btn btn--primary">Ver projetos</a>
-          <a href="#contato" class="btn btn--secondary">Entrar em contato</a>
+
+        <div class="hero__actions" data-reveal data-reveal-delay="3">
+          <a href="#projetos" class="btn btn--primary btn--lg">
+            Ver projetos
+            <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14"/>
+              <path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#contato" class="btn btn--secondary btn--lg">Entrar em contato</a>
         </div>
+
+        <ul class="hero__tags" data-reveal data-reveal-delay="4">
+          <li class="hero__tag">Landing pages</li>
+          <li class="hero__tag">Sites institucionais</li>
+          <li class="hero__tag">Sistemas personalizados</li>
+          <li class="hero__tag">Design responsivo</li>
+        </ul>
       </div>
+
+      <a class="hero__scroll" href="#sobre" aria-label="Ir para a próxima seção">
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+        <span class="hero__scroll-text">Rolar</span>
+      </a>
     </section>
 
     <!-- Sobre mim -->
-    <section class="section section--alt" id="sobre" aria-labelledby="sobre-title">
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
       <div class="container">
-        <header class="section__header">
-          <h2 class="section__title" id="sobre-title">Sobre mim</h2>
+        <header class="section__header" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Sobre mim</p>
+          <h2 class="section__title" id="sobre-title">
+            Soluções úteis, sem complicação desnecessária
+          </h2>
         </header>
+
         <div class="about">
-          <p class="about__text">
-            Sou Henrique Santos e desenvolvo sites e sistemas simples para pequenos
-            negócios. Gosto de transformar necessidades práticas em páginas claras,
-            responsivas e fáceis de usar.
-          </p>
-          <p class="about__text">
-            Meus projetos incluem landing pages, ferramentas de agendamento, geração de
-            orçamentos e dashboards comerciais. Meu objetivo é criar soluções úteis,
-            profissionais e sem complicação desnecessária.
-          </p>
+          <div class="about__content" data-reveal>
+            <p class="about__lead">
+              Sou Henrique Santos e desenvolvo sites e sistemas simples para pequenos
+              negócios. Gosto de transformar necessidades práticas em páginas claras,
+              responsivas e fáceis de usar.
+            </p>
+            <p class="about__text">
+              Meus projetos incluem landing pages, ferramentas de agendamento, geração de
+              orçamentos e dashboards comerciais. Meu objetivo é criar soluções úteis,
+              profissionais e sem complicação desnecessária.
+            </p>
+          </div>
+
+          <aside class="about__panel card-glow" data-reveal data-reveal-delay="1">
+            <h3 class="about__panel-title">O que eu entrego</h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <span class="skill__check" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                Sites e páginas responsivas
+              </li>
+              <li class="skill">
+                <span class="skill__check" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                Ferramentas de agendamento
+              </li>
+              <li class="skill">
+                <span class="skill__check" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                Geração de orçamentos
+              </li>
+              <li class="skill">
+                <span class="skill__check" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                Dashboards comerciais
+              </li>
+              <li class="skill">
+                <span class="skill__check" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                Cardápios e pedidos via WhatsApp
+              </li>
+              <li class="skill">
+                <span class="skill__check" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"/>
+                  </svg>
+                </span>
+                Publicação do projeto no ar
+              </li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>
 
     <!-- Projetos -->
-    <section class="section" id="projetos" aria-labelledby="projetos-title">
+    <section class="section section--alt" id="projetos" aria-labelledby="projetos-title">
       <div class="container">
-        <header class="section__header">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Portfólio</p>
           <h2 class="section__title" id="projetos-title">Projetos</h2>
           <p class="section__intro">
             Projetos demonstrativos criados para apresentar minhas habilidades em
@@ -102,8 +216,8 @@
         </header>
 
         <div class="projects-grid">
-          <!-- Projeto 1 -->
-          <article class="project-card">
+          <!-- Projeto 1 — destaque -->
+          <article class="project-card project-card--featured" data-reveal data-tilt>
             <div class="project-card__image-wrap">
               <img
                 src="assets/projetos/landing-psicologa.png"
@@ -117,7 +231,10 @@
               >
             </div>
             <div class="project-card__body">
-              <span class="project-card__category">Landing page</span>
+              <div class="project-card__meta">
+                <span class="project-card__category">Landing page</span>
+                <span class="project-card__flag">Destaque</span>
+              </div>
               <h3 class="project-card__title">Landing Page para Psicóloga</h3>
               <p class="project-card__description">
                 Página profissional criada para apresentar serviços, informações importantes
@@ -131,6 +248,10 @@
                   rel="noopener noreferrer"
                 >
                   Ver demonstração
+                  <svg class="btn__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7"/>
+                    <path d="M7 7h10v10"/>
+                  </svg>
                 </a>
                 <a
                   href="https://github.com/henriquedss0308-isa/landing-page-psicologa"
@@ -145,7 +266,7 @@
           </article>
 
           <!-- Projeto 2 -->
-          <article class="project-card">
+          <article class="project-card" data-reveal data-tilt>
             <div class="project-card__image-wrap">
               <img
                 src="assets/projetos/orca-facil.png"
@@ -158,7 +279,9 @@
               >
             </div>
             <div class="project-card__body">
-              <span class="project-card__category">Sistema comercial</span>
+              <div class="project-card__meta">
+                <span class="project-card__category">Sistema comercial</span>
+              </div>
               <h3 class="project-card__title">Orça Fácil</h3>
               <p class="project-card__description">
                 Ferramenta para criação e organização rápida de orçamentos para
@@ -172,6 +295,10 @@
                   rel="noopener noreferrer"
                 >
                   Ver demonstração
+                  <svg class="btn__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7"/>
+                    <path d="M7 7h10v10"/>
+                  </svg>
                 </a>
                 <a
                   href="https://github.com/henriquedss0308-isa/orca-facil"
@@ -186,7 +313,7 @@
           </article>
 
           <!-- Projeto 3 -->
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="1" data-tilt>
             <div class="project-card__image-wrap">
               <img
                 src="assets/projetos/agenda-simples.png"
@@ -199,7 +326,9 @@
               >
             </div>
             <div class="project-card__body">
-              <span class="project-card__category">Sistema de agendamento</span>
+              <div class="project-card__meta">
+                <span class="project-card__category">Sistema de agendamento</span>
+              </div>
               <h3 class="project-card__title">Agenda Simples</h3>
               <p class="project-card__description">
                 Sistema demonstrativo para organização de horários, atendimentos e compromissos.
@@ -212,6 +341,10 @@
                   rel="noopener noreferrer"
                 >
                   Ver demonstração
+                  <svg class="btn__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7"/>
+                    <path d="M7 7h10v10"/>
+                  </svg>
                 </a>
                 <a
                   href="https://github.com/henriquedss0308-isa/agenda-simples"
@@ -226,7 +359,7 @@
           </article>
 
           <!-- Projeto 4 -->
-          <article class="project-card">
+          <article class="project-card" data-reveal data-tilt>
             <div class="project-card__image-wrap">
               <img
                 src="assets/projetos/visao-comercial.png"
@@ -239,7 +372,9 @@
               >
             </div>
             <div class="project-card__body">
-              <span class="project-card__category">Dashboard comercial</span>
+              <div class="project-card__meta">
+                <span class="project-card__category">Dashboard comercial</span>
+              </div>
               <h3 class="project-card__title">Visão Comercial</h3>
               <p class="project-card__description">
                 Dashboard demonstrativo para visualizar indicadores e acompanhar
@@ -253,6 +388,10 @@
                   rel="noopener noreferrer"
                 >
                   Ver demonstração
+                  <svg class="btn__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7"/>
+                    <path d="M7 7h10v10"/>
+                  </svg>
                 </a>
                 <a
                   href="https://github.com/henriquedss0308-isa/visao-comercial"
@@ -267,7 +406,7 @@
           </article>
 
           <!-- Projeto 5 -->
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="1" data-tilt>
             <div class="project-card__image-wrap">
               <img
                 src="assets/projetos/menu-zap.jpg"
@@ -280,7 +419,9 @@
               >
             </div>
             <div class="project-card__body">
-              <span class="project-card__category">Cardápio digital</span>
+              <div class="project-card__meta">
+                <span class="project-card__category">Cardápio digital</span>
+              </div>
               <h3 class="project-card__title">MenuZap</h3>
               <p class="project-card__description">
                 Cardápio digital responsivo com carrinho, personalização de itens e envio do pedido pelo WhatsApp.
@@ -293,6 +434,10 @@
                   rel="noopener noreferrer"
                 >
                   Ver demonstração
+                  <svg class="btn__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M7 17 17 7"/>
+                    <path d="M7 7h10v10"/>
+                  </svg>
                 </a>
                 <a
                   href="https://github.com/henriquedss0308-isa/menu-zap"
@@ -310,10 +455,11 @@
     </section>
 
     <!-- Serviços -->
-    <section class="section section--alt" id="servicos" aria-labelledby="servicos-title">
+    <section class="section" id="servicos" aria-labelledby="servicos-title">
       <div class="container">
-        <header class="section__header">
-          <h2 class="section__title" id="servicos-title">Serviços</h2>
+        <header class="section__header" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Serviços</p>
+          <h2 class="section__title" id="servicos-title">Como posso ajudar seu negócio</h2>
           <p class="section__intro">
             Soluções diretas e práticas para quem precisa de presença online e
             organização no dia a dia.
@@ -321,9 +467,10 @@
         </header>
 
         <div class="services-grid">
-          <article class="service-card">
+          <article class="service-card card-glow" data-reveal>
+            <span class="service-card__index" aria-hidden="true">01</span>
             <div class="service-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2"/>
                 <path d="M3 9h18"/>
                 <path d="M9 21V9"/>
@@ -335,9 +482,10 @@
             </p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card card-glow" data-reveal data-reveal-delay="1">
+            <span class="service-card__index" aria-hidden="true">02</span>
             <div class="service-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/>
                 <path d="M2 12h20"/>
                 <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
@@ -349,9 +497,10 @@
             </p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card card-glow" data-reveal data-reveal-delay="2">
+            <span class="service-card__index" aria-hidden="true">03</span>
             <div class="service-card__icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 20V10"/>
                 <path d="M18 20V4"/>
                 <path d="M6 20v-4"/>
@@ -367,9 +516,10 @@
     </section>
 
     <!-- Como funciona -->
-    <section class="section" id="como-funciona" aria-labelledby="como-funciona-title">
+    <section class="section section--alt" id="como-funciona" aria-labelledby="como-funciona-title">
       <div class="container">
-        <header class="section__header">
+        <header class="section__header" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Processo</p>
           <h2 class="section__title" id="como-funciona-title">Como funciona</h2>
           <p class="section__intro">
             Um processo simples, do entendimento da necessidade até a publicação.
@@ -377,7 +527,7 @@
         </header>
 
         <ol class="steps">
-          <li class="step">
+          <li class="step" data-reveal>
             <span class="step__number" aria-hidden="true">1</span>
             <div class="step__content">
               <h3 class="step__title">Entendo o que o negócio precisa</h3>
@@ -386,7 +536,7 @@
               </p>
             </div>
           </li>
-          <li class="step">
+          <li class="step" data-reveal data-reveal-delay="1">
             <span class="step__number" aria-hidden="true">2</span>
             <div class="step__content">
               <h3 class="step__title">Crio uma primeira versão para validação</h3>
@@ -395,7 +545,7 @@
               </p>
             </div>
           </li>
-          <li class="step">
+          <li class="step" data-reveal data-reveal-delay="2">
             <span class="step__number" aria-hidden="true">3</span>
             <div class="step__content">
               <h3 class="step__title">Realizo os ajustes e publico o projeto</h3>
@@ -411,54 +561,75 @@
     <!-- Contato -->
     <section class="section section--contact" id="contato" aria-labelledby="contato-title">
       <div class="container">
-        <header class="section__header section__header--center">
-          <h2 class="section__title" id="contato-title">Tem algum projeto em mente?</h2>
-          <p class="section__intro">
-            Posso criar uma solução simples e personalizada para o seu negócio.
-          </p>
-        </header>
+        <div class="contact-panel" data-reveal>
+          <header class="section__header section__header--center">
+            <p class="eyebrow eyebrow--center"><span class="eyebrow__line" aria-hidden="true"></span>Contato</p>
+            <h2 class="section__title section__title--lg" id="contato-title">
+              Tem algum projeto <span class="text-gradient">em mente?</span>
+            </h2>
+            <p class="section__intro">
+              Posso criar uma solução simples e personalizada para o seu negócio.
+            </p>
+          </header>
 
-        <div class="contact-actions" id="contact-actions">
-          <!-- Links também configurados em js/main.js (fonte principal) -->
-          <a
-            href="https://wa.me/5517996712837"
-            class="btn btn--primary contact-btn"
-            data-contact="whatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            WhatsApp
-          </a>
-          <a
-            href="https://www.instagram.com/henrique_santoszxs"
-            class="btn btn--secondary contact-btn"
-            data-contact="instagram"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-          <a
-            href="mailto:henrique.dss0308@gmail.com"
-            class="btn btn--secondary contact-btn"
-            data-contact="email"
-          >
-            E-mail
-          </a>
-          <a
-            href="https://github.com/henriquedss0308-isa"
-            class="btn btn--secondary contact-btn"
-            data-contact="github"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+          <div class="contact-actions" id="contact-actions">
+            <!-- Links também configurados em js/main.js (fonte principal) -->
+            <a
+              href="https://wa.me/5517996712837"
+              class="btn btn--primary btn--lg contact-btn"
+              data-contact="whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.22 8.22 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-3.1 4.1c-.15 0-.4.06-.6.28-.21.22-.8.78-.8 1.9s.82 2.2.93 2.36c.11.15 1.6 2.44 3.87 3.42.54.23.96.37 1.29.48.54.17 1.04.15 1.43.09.44-.07 1.34-.55 1.53-1.08.19-.53.19-.98.13-1.08-.06-.09-.2-.15-.43-.26-.22-.11-1.34-.66-1.55-.74-.2-.07-.36-.11-.5.11-.15.22-.58.74-.71.89-.13.15-.26.17-.49.06-.22-.11-.95-.35-1.8-1.11-.67-.6-1.12-1.33-1.25-1.55-.13-.22-.02-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.08-.15.04-.28-.02-.39-.05-.11-.5-1.22-.69-1.67-.18-.43-.36-.37-.5-.38l-.42-.01"/>
+              </svg>
+              WhatsApp
+            </a>
+            <a
+              href="https://www.instagram.com/henrique_santoszxs"
+              class="btn btn--secondary btn--lg contact-btn"
+              data-contact="instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+              Instagram
+            </a>
+            <a
+              href="mailto:henrique.dss0308@gmail.com"
+              class="btn btn--secondary btn--lg contact-btn"
+              data-contact="email"
+            >
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m2 7 10 6 10-6"/>
+              </svg>
+              E-mail
+            </a>
+            <a
+              href="https://github.com/henriquedss0308-isa"
+              class="btn btn--secondary btn--lg contact-btn"
+              data-contact="github"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 6.8c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10"/>
+              </svg>
+              GitHub
+            </a>
+          </div>
+
+          <p class="contact-note" id="contact-note" hidden>
+            Alguns canais de contato ainda não foram configurados. Atualize os links em
+            <code>js/main.js</code>.
+          </p>
         </div>
-        <p class="contact-note" id="contact-note" hidden>
-          Alguns canais de contato ainda não foram configurados. Atualize os links em
-          <code>js/main.js</code>.
-        </p>
       </div>
     </section>
   </main>
@@ -467,17 +638,43 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <span class="footer__name">Henrique Santos</span>
-        <span class="footer__tagline">Desenvolvimento web</span>
+        <a href="#inicio" class="logo logo--footer">
+          <span class="logo__mark" aria-hidden="true">HS</span>
+          <span class="logo__text">Henrique<span class="logo__last">Santos</span></span>
+        </a>
+        <p class="footer__tagline">
+          Sites, landing pages e sistemas simples para pequenos negócios.
+        </p>
       </div>
-      <a
-        href="https://github.com/henriquedss0308-isa"
-        class="footer__link"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
+
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+        <p class="footer__nav-title">Navegação</p>
+        <ul class="footer__nav-list">
+          <li><a href="#sobre" class="footer__link">Sobre mim</a></li>
+          <li><a href="#projetos" class="footer__link">Projetos</a></li>
+          <li><a href="#servicos" class="footer__link">Serviços</a></li>
+          <li><a href="#como-funciona" class="footer__link">Como funciona</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contact">
+        <p class="footer__nav-title">Contato</p>
+        <ul class="footer__nav-list">
+          <li>
+            <a href="https://wa.me/5517996712837" class="footer__link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </li>
+          <li>
+            <a href="mailto:henrique.dss0308@gmail.com" class="footer__link">E-mail</a>
+          </li>
+          <li>
+            <a href="https://github.com/henriquedss0308-isa" class="footer__link" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/henrique_santoszxs" class="footer__link" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </li>
+        </ul>
+      </div>
+
       <p class="footer__copy">
         &copy; <span id="current-year"></span> Henrique Santos. Todos os direitos reservados.
       </p>
