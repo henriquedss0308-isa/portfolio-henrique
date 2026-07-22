@@ -229,4 +229,4 @@ A cada `git push` na branch principal, a Vercel republica o site automaticamente
 
 ## Observação importante
 
-Os projetos exibidos neste portfólio são **demonstrativos**, criados para apresentar habilidades em desenvolvimento web. Eles **não** representam trabalhos realizados para clientes reais. O site deixa isso claro na introdução da seção de projetos.
+Os projetos exibidos neste portfólio são **demonstrativos**, criados para apresentar habilidades em desenvolvimento web. O site deixa isso claro na introdução da seção de projetos, apresentando-os como exemplos do tipo de solução desenvolvida sob medida — sem sugerir ausência de trabalhos para clientes.
